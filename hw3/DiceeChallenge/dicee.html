@@ -1,0 +1,67 @@
+<!-- 
+  =====================================================
+  **** 
+  Name: Hayden Suzuki
+  Date: 1/27/2026
+  Course: ICS 385 Spring 2026
+  Assignment: Dicee Challenge - Completed
+  Notes: This entire code has been edited and double-checked by ChatGPT.
+  =====================================================
+  ***
+  DICEE CHALLENGE - DICE GAME HTML FILE
+  A simple two-player dice rolling game
+  =====================================================
+-->
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Dicee</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Indie+Flower|Lobster"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>Roll the Dice!</h1>
+    
+      <button id="rollBtn">Roll Again</button> <!--  This button rolls the dice again. The original code required the player to reroll the dice by refreshing the page. This button aims to improve user experience. -->
+
+      <div class="dice"> <!-- This code block represents the page-view of Player 1's dice. -->
+        <p>Player 1</p>
+        <img class="p1d1" src="images/dice6.png" />
+        <img class="p1d2" src="images/dice6.png" />
+        <img class="p1d3" src="images/dice6.png" />
+      </div>
+
+      <div class="dice"> <!-- This code block represents the page-view of Player 2's dice. -->
+        <p>Player 2</p>
+        <img class="p2d1" src="images/dice6.png" />
+        <img class="p2d2" src="images/dice6.png" />
+        <img class="p2d3" src="images/dice6.png" />
+      </div>
+      <div class="rules">
+
+    <h2>Rules</h2> <!--This code block displays a Rules section on the webpage to inform players of how the game works. -->
+    <ul>
+     <li>Each player rolls <strong>three</strong> six-sided dice.</li>
+      <li>The player with the <strong>higher total</strong> wins.</li>
+      <li>
+        If the totals tie, the player with the <strong>highest single die</strong> wins.
+      <br />
+      Example: Player 1 rolls <strong>5, 5, 1</strong> (total 11) vs Player 2 rolls
+      <strong>6, 4, 1</strong> (total 11) → <strong>Player 2 wins</strong> because they rolled a <strong>6</strong>.
+      </li>
+      <li>If both players roll the exact same total, and the same highest-value dice, it is a <strong>draw</strong>.</li>
+    </ul>
+  </div>
+    </div>
+
+    <script src="index.js" charset="utf-8"></script>
+  </body>
+
+  <footer>www 🎲 App Brewery 🎲 com</footer>
+</html>
