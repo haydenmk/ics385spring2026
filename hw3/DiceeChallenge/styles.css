@@ -1,0 +1,88 @@
+body {
+  background-color: #393e46;
+  text-align: center;
+  font-family: "Indie Flower", cursive;
+  margin: 0;
+}
+
+h1 {
+  margin: 30px;
+  font-family: "Lobster", cursive;
+  font-size: 5rem;
+  color: #4ecca3;
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+}
+
+.dice {
+  display: inline-block;
+  text-align: center;
+  margin: 20px;
+}
+
+.dice p {
+  font-size: 2rem;
+  color: #eeeeee;
+}
+
+.dice img {
+  width: 90px;
+  margin: 5px;
+}
+
+button {
+  display: block;
+  margin: 30px auto 0 auto; 
+  background-color: #4ecca3;
+  color: #393e46;
+  border: none;
+  padding: 12px 28px;
+  font-size: 1.4rem;
+  font-family: "Lobster", cursive;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.15s ease, background-color 0.15s ease;
+}
+
+button:hover {
+  background-color: #3bbf96;
+  transform: scale(1.05);
+}
+
+footer {
+  margin-top: 40px;
+  color: #eeeeee;
+  font-size: 1rem;
+}
+
+.rules {
+  width: min(700px, 90%);
+  margin: 35px auto 0 auto;
+  padding: 18px 22px;
+  background: rgba(238, 238, 238, 0.08);
+  border-radius: 12px;
+  text-align: left;
+}
+
+.rules h2 {
+  font-family: "Lobster", cursive;
+  color: #4ecca3;
+  font-size: 2.2rem;
+  margin: 0 0 10px 0;
+  text-align: center;
+}
+
+.rules ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.rules li {
+  color: #eeeeee;
+  font-size: 1.25rem;
+  line-height: 1.6;
+  margin: 10px 0;
+}
