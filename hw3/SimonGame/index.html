@@ -1,0 +1,56 @@
+<!-- 
+  =====================================================
+  **** 
+  Name: Hayden Suzuki
+  Date: 1/31/2026
+  Course: ICS 385 Spring 2026
+  Assignment: Simon Game Challenge - Completed
+  Notes: This entire code has been edited and double-checked by ChatGPT. The comments have been added by me (Hayden) to explain the code functionality.
+  =====================================================
+  ***
+ Simon GAME CHALLENGE - SIMON GAME HTML FILE
+  A Simon Says memory game with Classic and Hard modes
+  =====================================================
+-->
+  <!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head> 
+  <meta charset="utf-8">
+  <title>Simon</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+</head>
+
+<body> 
+  <h1 id="level-title">Simon Says</h1>
+
+<div class="controls"> <!-- This section displays the game controls including start button and mode selection -->
+  <button id="start-btn" class="start-btn">Start Game</button>
+  <button id="classic-btn" class="mode-btn active">Classic Mode</button>
+  <button id="hard-btn" class="mode-btn">Hard Mode</button>
+
+  <div id="rules"> <!-- This section displays the game rules to the player. -->
+    <p>- Repeat the pattern and see how high you can score!</p>
+    <p>- Classic mode shows the entire pattern</p>
+    <p>- Hard mode only shows the next button in the order!</p>
+  </div>
+</div>
+<!-- This section creates the four colored buttons for the Simon game -->
+  <div class="container">
+    <div class="row">
+      <div type="button" id="green" class="btn green"></div>
+      <div type="button" id="red" class="btn red"></div>
+    </div>
+
+    <div class="row">
+      <div type="button" id="yellow" class="btn yellow"></div>
+      <div type="button" id="blue" class="btn blue"></div>
+    </div>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="game.js" charset="utf-8"></script>
+</body>
+
+</html>
