@@ -8,7 +8,7 @@ console.log(mySuperHeroName); //The superhero name randomly selected in the prev
 console.log(mySuperVillainName); //The supervillain name randomly selected in the previous section is output.
 
 const Quote = require('inspirational-quotes'); //This line loads the "inspirational-quotes" package so that the next two lines are able to use its features.
-var myQuote = Quote.getRandomQuote(); //var creates a variable called "Quote". The "inspirational-quotes" package's built-in feature is then used to pull a random quote.
+var myQuote = Quote.getRandomQuote(); //var creates a variable called "myQuote". The "inspirational-quotes" package's built-in feature is then used to pull a random quote.
 console.log(myQuote); //The quote from the previous line is output.
 
 const MovieQuote = require('popular-movie-quotes'); //This line loads the "popular-movie-quotes" package so that the next two lines are able to use its features.
@@ -16,7 +16,7 @@ var PopularMovieQuote = MovieQuote.getRandomQuote(); //var creates a variable ca
 console.log(PopularMovieQuote); //The quote from the previous line is output.
 
 const LastWord = require('famous-last-words'); //This line loads the "famous-last-words" package so that the next two lines are able to use its features.
-const FamousLastWord = LastWords[0]; //This line pulls the first quote listed from the "famous-last-words" package. Changing the number inside of the brackets changes which quote is pulled. Since the package is an array and does not have any built-in random functions it is easier to 
+const FamousLastWord = LastWord[0]; //This line pulls the first quote listed from the "famous-last-words" package. Changing the number inside of the brackets changes which quote is pulled. Since the package is an array and does not have any built-in random functions it is easier to 
 console.log(FamousLastWord); //The quote chosen in the previous line is output.
 
 const fs = require('fs'); //This line requires that the File System module is loaded.
