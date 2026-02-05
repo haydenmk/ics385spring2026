@@ -9,8 +9,7 @@
   =====================================================
   Setup: 
   npm install
-  npm install inquirer
-  npm install qr-image
+  node index.js
   =====================================================
   This JavaScript file is a QR code generator using a link input into the terminal.
 */ 
