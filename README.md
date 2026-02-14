@@ -14,5 +14,5 @@ This repository is for my ICS 385 work.
 - HW4a: Basic NodeJS - [hero-hw4](https://github.com/haydenmk/ics385spring2026/blob/main/week4/hero-hw4)
 
 # Week 5 - ExpressJS
-- HW5b: [f2cCalc.html](https://github.com/haydenmk/ics385spring2026/blob/main/week5/f2cCalc.html), [index.js](https://github.com/haydenmk/ics385spring2026/blob/main/week5/index.js)
-- HW5c: 
+- HW5b: [f2cCalc.html](https://github.com/haydenmk/ics385spring2026/blob/main/week5/5b/f2cCalc.html), [index.js](https://github.com/haydenmk/ics385spring2026/blob/main/week5/5b/index.js)
+- HW5c: [VolCalculator.html](https://github.com/haydenmk/ics385spring2026/blob/main/week5/5c/VolCalculator.html), [index.js](https://github.com/haydenmk/ics385spring2026/blob/main/week5/5c/index.js)
