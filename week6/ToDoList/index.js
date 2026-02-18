@@ -5,7 +5,8 @@
   Date: 2/18/2026
   Course: ICS 385 Spring 2026
   Assignment: To Do List
-  Notes: This code used ChatGPT to explain functions, but not for code generation. Most of the changes from the base code involved changing the variables from "items" and "workitems" to "chores" and "camping tasks"
+  Notes: This code used ChatGPT to explain functions, but not for code generation. Most of the changes from the base code involved changing the variables from "items" and "workitems" to "chores" and "camping tasks".
+  You can switch lists by adding either /chores or /camping to the end of the http://localhost:3000 url.
   =====================================================
 */
 
