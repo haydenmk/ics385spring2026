@@ -1,5 +1,5 @@
-const express = require("express"); /* imports express, allows the code to create a web server*/
-const bodyParser = require("body-parser"); /* imports body-parser, allows the code to read data sent through the web app*/
+const express = require("express"); /* imports express*/
+const bodyParser = require("body-parser"); /* imports body-parser*/
 
 const date = require(__dirname + "/date.js"); /* loads date.js, lets the code use its functions */
 
