@@ -1,70 +1,70 @@
-class CourseCatalogManager {
-  constructor() {
-    this.courseCatalog = null;
+class CourseCatalogManager { // Defines the CourseCatalogManager JavaScript class
+  constructor() { // Constructor initializes the different variables used for storing course data, search filters, and then initializes the app to start it
+    this.courseCatalog = null; 
     this.filteredCourses = [];
     this.searchCache = new Map();
     this.currentSearch = "";
     this.currentDepartment = "all";
-    this.currentCredits = "all";
+    this.currentCredits = "all"; 
 
     this.initializeApp();
   }
 
-  initializeApp() {
+  initializeApp() { // Initalizes the app when the page loads
     try {
-      this.setupEventListeners();
-      this.loadSampleData();
+      this.setupEventListeners(); // Sets up event listeners for buttons and inputs
+      this.loadSampleData(); // Loads the sample course data for the interface
     } catch (error) {
       this.handleError("Application initialization failed", error);
     }
   }
 
-  setupEventListeners() {
-    document.getElementById("searchInput").addEventListener("input", (event) => {
+  setupEventListeners() { // Adds event listeners on interactive portions of the page (search bars, dropdown filters, button functionalities)
+    document.getElementById("searchInput").addEventListener("input", (event) => { 
       this.currentSearch = event.target.value;
       this.applyFilters();
     });
 
-    document.getElementById("clearSearchBtn").addEventListener("click", () => {
-      document.getElementById("searchInput").value = "";
-      this.currentSearch = "";
+    document.getElementById("clearSearchBtn").addEventListener("click", () => { // Detects when the user types in the search box
+      document.getElementById("searchInput").value = ""; 
+      this.currentSearch = ""; // Saves the text input by the user and updates the displayed courses
       this.applyFilters();
     });
 
-    document.getElementById("departmentFilter").addEventListener("change", (event) => {
-      this.currentDepartment = event.target.value;
+    document.getElementById("departmentFilter").addEventListener("change", (event) => { // Detects when the user changes the dropdown filter
+      this.currentDepartment = event.target.value; // Stores the selected department and updates the course list to only display courses from that department
       this.applyFilters();
     });
 
-    document.getElementById("creditsFilter").addEventListener("change", (event) => {
-      this.currentCredits = event.target.value;
+    document.getElementById("creditsFilter").addEventListener("change", (event) => { // Detects when the user selects a credits filter
+      this.currentCredits = event.target.value; // Saves the credit value of the selected class, then refreshes the course list to only include classes with the selected value
       this.applyFilters();
     });
 
-    document.getElementById("loadSampleBtn").addEventListener("click", () => {
+    document.getElementById("loadSampleBtn").addEventListener("click", () => { // When run, loads the sample JSON course catalog file and then displays all of the courses on the page
       this.loadSampleData();
     });
 
-    document.getElementById("addCourseBtn").addEventListener("click", () => {
+    document.getElementById("addCourseBtn").addEventListener("click", () => { // Runs when the "Add New Course" button is clicked, prompts the user to add course information if the course information is valid
       this.addNewCourse();
     });
 
-    document.getElementById("exportBtn").addEventListener("click", () => {
+    document.getElementById("exportBtn").addEventListener("click", () => { // Runs when the "Export JSON" button is clicked, downloads the entire course catalog as a JSON file
       this.exportToJSON();
     });
 
-    document.getElementById("closeModalBtn").addEventListener("click", () => {
+      document.getElementById("closeModalBtn").addEventListener("click", () => { // Closes the course details modal when the close button is clicked
       this.hideModal();
     });
 
-    document.getElementById("courseModal").addEventListener("click", (event) => {
+    document.getElementById("courseModal").addEventListener("click", (event) => { // Allows the modal window to close when the user clicks outside the modal content
       if (event.target.id === "courseModal") {
         this.hideModal();
       }
     });
   }
 
-  async loadSampleData() {
+  async loadSampleData() { // Loads the sample JSON file containing course catalog data
     try {
       const response = await fetch("sample-data.json");
       if (!response.ok) {
@@ -78,7 +78,7 @@ class CourseCatalogManager {
     }
   }
 
-  loadCourseData(jsonString) {
+  loadCourseData(jsonString) { // Parses the JSON data and prepares it for use in the application
     try {
       if (!jsonString || typeof jsonString !== "string") {
         throw new Error("Invalid input: JSON string required");
@@ -95,7 +95,7 @@ class CourseCatalogManager {
     }
   }
 
-  validateCatalogStructure(data) {
+  validateCatalogStructure(data) { // Validates that the JSON catalog contains all required fields and structure
     const requiredFields = ["university", "semester", "departments", "metadata"];
     const missingFields = requiredFields.filter((field) => !Object.prototype.hasOwnProperty.call(data, field));
 
@@ -114,7 +114,7 @@ class CourseCatalogManager {
     });
   }
 
-  getAllCourses() {
+  getAllCourses() { // Combines all courses from every department into one array for easier searching and filtering
     if (!this.courseCatalog) {
       return [];
     }
@@ -134,7 +134,7 @@ class CourseCatalogManager {
     return allCourses;
   }
 
-  applyFilters() {
+  applyFilters() { // Applies the search text, department filter, and credit filter to determine which courses should be displayed
     let results = this.getAllCourses();
 
     const searchTerm = this.currentSearch.trim().toLowerCase();
@@ -171,7 +171,7 @@ class CourseCatalogManager {
     this.displayStatistics();
   }
 
-  displayAllCourses() {
+  displayAllCourses() { // Displays the filtered courses as cards on the webpage
     const container = document.getElementById("coursesContainer");
 
     if (!container) {
@@ -192,7 +192,7 @@ class CourseCatalogManager {
     });
   }
 
-  createCourseCard(course) {
+  createCourseCard(course) { // Creates the HTML course card element that displays course information
     const cardDiv = document.createElement("div");
     cardDiv.className = "course-card";
 
@@ -205,7 +205,7 @@ class CourseCatalogManager {
       enrollmentStatus = "filling";
     }
 
-    cardDiv.innerHTML = `
+      cardDiv.innerHTML = `
       <div class="course-header">
         <h3 class="course-code">${course.courseCode}</h3>
         <span class="credits">${course.credits} credits</span>
@@ -234,21 +234,21 @@ class CourseCatalogManager {
       <button class="details-btn">View Details</button>
     `;
 
-    cardDiv.querySelector(".details-btn").addEventListener("click", () => {
+    cardDiv.querySelector(".details-btn").addEventListener("click", () => { // Opens the modal window displaying full course details
       this.showCourseDetails(course.courseCode);
     });
 
     return cardDiv;
   }
 
-  truncateText(text, maxLength) {
+  truncateText(text, maxLength) { // Shortens long text descriptions so course cards remain readable
     if (text.length <= maxLength) {
       return text;
     }
     return text.substring(0, maxLength) + "...";
   }
 
-  showCourseDetails(courseCode) {
+  showCourseDetails(courseCode) { // Displays the full course information inside the modal window
     const course = this.getAllCourses().find((item) => item.courseCode === courseCode);
 
     if (!course) {
@@ -288,14 +288,14 @@ class CourseCatalogManager {
       </ul>
     `;
 
-    modal.classList.remove("hidden");
+    modal.classList.remove("hidden"); // Makes the modal visible
   }
 
-  hideModal() {
+  hideModal() { // Hides the modal window when the user closes it
     document.getElementById("courseModal").classList.add("hidden");
   }
 
-  displayStatistics() {
+  displayStatistics() { // Updates statistics showing total courses, departments, and average enrollment
     const allCourses = this.getAllCourses();
 
     document.getElementById("totalCourses").textContent = allCourses.length;
@@ -303,7 +303,7 @@ class CourseCatalogManager {
     document.getElementById("averageEnrollment").textContent = this.calculateEnrollmentStats() + "%";
   }
 
-  calculateEnrollmentStats() {
+  calculateEnrollmentStats() { // Calculates the overall enrollment percentage across all courses
     const allCourses = this.getAllCourses();
 
     if (allCourses.length === 0) {
@@ -325,7 +325,7 @@ class CourseCatalogManager {
     return Math.round((totalEnrolled / totalCapacity) * 100);
   }
 
-  validateCourseData(course) {
+  validateCourseData(course) { // Validates new course data to ensure required fields and values are correct
     const errors = [];
 
     const requiredStrings = ["courseCode", "title", "description"];
@@ -382,7 +382,7 @@ class CourseCatalogManager {
     };
   }
 
-  addNewCourse() {
+  addNewCourse() { // Prompts the user to enter course information and adds the course to the catalog
     if (!this.courseCatalog) {
       alert("Load sample data first.");
       return;
@@ -452,7 +452,7 @@ class CourseCatalogManager {
     alert("Course added successfully.");
   }
 
-  exportToJSON() {
+  exportToJSON() { // Converts the catalog into JSON format and downloads it as a file
     if (!this.courseCatalog) {
       alert("No course catalog data to export.");
       return;
@@ -470,12 +470,13 @@ class CourseCatalogManager {
     URL.revokeObjectURL(url);
   }
 
-  handleError(operation, error) {
+  handleError(operation, error) { // Handles errors by logging them and showing a message to the user
     console.error(operation, error);
     alert(operation + ": " + error.message);
   }
 }
 
+// Starts the course catalog application after the HTML page finishes loading
 document.addEventListener("DOMContentLoaded", function () {
   window.app = new CourseCatalogManager();
 });
