@@ -21,3 +21,6 @@ This repository is for my ICS 385 work.
 # Week 6 - EJS and Pug
 - HW6a: To Do List [index.js](https://github.com/haydenmk/ics385spring2026/blob/main/week6/ToDoList/index.js), [list.ejs](https://github.com/haydenmk/ics385spring2026/blob/main/week6/ToDoList/list.ejs)
 - HW6b: Random Course Generator [solution.js](https://github.com/haydenmk/ics385spring2026/blob/main/week6/RandomCourseGenerator/solution.js), [solution.ejs](https://github.com/haydenmk/ics385spring2026/blob/main/week6/RandomCourseGenerator/solution.ejs)
+
+# Week 8 - JSON and APIs
+- HW8a: Course Catalog - [course-catalog.js](https://github.com/haydenmk/ics385spring2026/blob/main/week8/basic-json/course-catalog.js), [index.html](https://github.com/haydenmk/ics385spring2026/blob/main/week8/basic-json/index.html), [sample-data.json](https://github.com/haydenmk/ics385spring2026/blob/main/week8/basic-json/sample-data.json), [styles.css](https://github.com/haydenmk/ics385spring2026/blob/main/week8/basic-json/styles.css)
