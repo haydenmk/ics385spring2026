@@ -78,7 +78,7 @@ class CourseCatalogManager { // Defines the CourseCatalogManager JavaScript clas
     }
   }
 
-  loadCourseData(jsonString) { // Parses the JSON data and prepares it for use in the application
+  loadCourseData(jsonString) { // Converts the raw JSON string into a JavaScript object, then validates its structure, and then loads the catalog into the application for searching in order to display it
     try {
       if (!jsonString || typeof jsonString !== "string") {
         throw new Error("Invalid input: JSON string required");
@@ -95,7 +95,7 @@ class CourseCatalogManager { // Defines the CourseCatalogManager JavaScript clas
     }
   }
 
-  validateCatalogStructure(data) { // Validates that the JSON catalog contains all required fields and structure
+  validateCatalogStructure(data) { // Verifies that the JSON catalog has the required fields (university, semester, departments, metadata) and that each department has valid course arrays
     const requiredFields = ["university", "semester", "departments", "metadata"];
     const missingFields = requiredFields.filter((field) => !Object.prototype.hasOwnProperty.call(data, field));
 
@@ -114,7 +114,7 @@ class CourseCatalogManager { // Defines the CourseCatalogManager JavaScript clas
     });
   }
 
-  getAllCourses() { // Combines all courses from every department into one array for easier searching and filtering
+  getAllCourses() { // Extracts courses from the nested JSON department structure and combines them into a single array to make searching and filtering easier
     if (!this.courseCatalog) {
       return [];
     }
@@ -134,7 +134,7 @@ class CourseCatalogManager { // Defines the CourseCatalogManager JavaScript clas
     return allCourses;
   }
 
-  applyFilters() { // Applies the search text, department filter, and credit filter to determine which courses should be displayed
+  applyFilters() { // Applies the search text, department filter, and credit filter to determine which courses should be displayed by the website
     let results = this.getAllCourses();
 
     const searchTerm = this.currentSearch.trim().toLowerCase();
@@ -192,7 +192,7 @@ class CourseCatalogManager { // Defines the CourseCatalogManager JavaScript clas
     });
   }
 
-  createCourseCard(course) { // Creates the HTML course card element that displays course information
+  createCourseCard(course) { // Creates the HTML course card element that displays course information using the JSON data
     const cardDiv = document.createElement("div");
     cardDiv.className = "course-card";
 
@@ -248,7 +248,7 @@ class CourseCatalogManager { // Defines the CourseCatalogManager JavaScript clas
     return text.substring(0, maxLength) + "...";
   }
 
-  showCourseDetails(courseCode) { // Displays the full course information inside the modal window
+  showCourseDetails(courseCode) { // Finds the selected course in the catalog JSON and displays all course information inside the modal window
     const course = this.getAllCourses().find((item) => item.courseCode === courseCode);
 
     if (!course) {
@@ -295,7 +295,7 @@ class CourseCatalogManager { // Defines the CourseCatalogManager JavaScript clas
     document.getElementById("courseModal").classList.add("hidden");
   }
 
-  displayStatistics() { // Updates statistics showing total courses, departments, and average enrollment
+  displayStatistics() { // Updates catalog statistics such as total courses, total departments, and average enrollment using the course catalog data
     const allCourses = this.getAllCourses();
 
     document.getElementById("totalCourses").textContent = allCourses.length;
@@ -303,7 +303,7 @@ class CourseCatalogManager { // Defines the CourseCatalogManager JavaScript clas
     document.getElementById("averageEnrollment").textContent = this.calculateEnrollmentStats() + "%";
   }
 
-  calculateEnrollmentStats() { // Calculates the overall enrollment percentage across all courses
+  calculateEnrollmentStats() { // Calculates the overall enrollment percentage by comparing total enrolled students to total course capacity using Math function
     const allCourses = this.getAllCourses();
 
     if (allCourses.length === 0) {
@@ -325,7 +325,7 @@ class CourseCatalogManager { // Defines the CourseCatalogManager JavaScript clas
     return Math.round((totalEnrolled / totalCapacity) * 100);
   }
 
-  validateCourseData(course) { // Validates new course data to ensure required fields and values are correct
+  validateCourseData(course) { // Validates new course data to ensure required fields, correct data types, and logical constraints before adding it to the catalog
     const errors = [];
 
     const requiredStrings = ["courseCode", "title", "description"];
@@ -382,7 +382,7 @@ class CourseCatalogManager { // Defines the CourseCatalogManager JavaScript clas
     };
   }
 
-  addNewCourse() { // Prompts the user to enter course information and adds the course to the catalog
+  addNewCourse() { // Prompts the user to enter course information and adds the course to the catalog if the data input follows the format
     if (!this.courseCatalog) {
       alert("Load sample data first.");
       return;
@@ -470,13 +470,12 @@ class CourseCatalogManager { // Defines the CourseCatalogManager JavaScript clas
     URL.revokeObjectURL(url);
   }
 
-  handleError(operation, error) { // Handles errors by logging them and showing a message to the user
+  handleError(operation, error) { // Handles errors by logging them to the console and displaying a message to the user
     console.error(operation, error);
     alert(operation + ": " + error.message);
   }
 }
 
-// Starts the course catalog application after the HTML page finishes loading
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", function () { // Starts the course catalog application after the HTML page finishes loading
   window.app = new CourseCatalogManager();
 });
