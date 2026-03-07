@@ -1,39 +1,43 @@
-<!DOCTYPE html>
+<!DOCTYPE html> <!-- Sets the document as HTML5 -->
 <html lang="en">
-<head>
+<head> <!-- Contains page metadata and external resources -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>UH Maui College - Course Catalog</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css"> <!-- Links the CSS file used for page styling -->
 </head>
-<body>
-  <header>
+
+<body> 
+
+  <header> <!-- Displays the title of the course catalog page -->
     <div class="header-content">
       <h1>UH Maui College Course Catalog</h1>
       <p>Spring 2026 - Interactive Course Browser</p>
     </div>
   </header>
 
-  <main>
-    <section class="controls">
+  <main> <!-- Main content area containing controls, statistics, and course display -->
+
+    <section class="controls"> <!-- Contains the search bar, filters, and action buttons -->
+
       <div class="search-section">
         <input
           type="text"
           id="searchInput"
           placeholder="Search courses, instructors, topics..."
-        >
-        <button id="clearSearchBtn">Clear</button>
+        > <!-- Search field used to filter courses -->
+        <button id="clearSearchBtn">Clear</button> <!-- Clears the search input -->
       </div>
 
       <div class="filter-section">
-        <select id="departmentFilter">
+        <select id="departmentFilter"> <!-- Dropdown used to filter courses by department -->
           <option value="all">All Departments</option>
           <option value="ICS">ICS</option>
           <option value="MATH">MATH</option>
           <option value="ENG">ENG</option>
         </select>
 
-        <select id="creditsFilter">
+        <select id="creditsFilter"> <!-- Dropdown used to filter courses by credit hours -->
           <option value="all">All Credit Hours</option>
           <option value="1">1 Credit</option>
           <option value="3">3 Credits</option>
@@ -41,14 +45,16 @@
         </select>
       </div>
 
-      <div class="action-section">
+      <div class="action-section"> <!-- Buttons used to load data, add courses, or export JSON -->
         <button id="loadSampleBtn">Load Sample Data</button>
         <button id="addCourseBtn">Add New Course</button>
         <button id="exportBtn">Export JSON</button>
       </div>
+
     </section>
 
-    <section id="statisticsSection" class="statistics">
+    <section id="statisticsSection" class="statistics"> <!-- Displays catalog statistics -->
+
       <div class="stat-item">
         <span class="stat-number" id="totalCourses">0</span>
         <span class="stat-label">Total Courses</span>
@@ -63,24 +69,26 @@
         <span class="stat-number" id="averageEnrollment">0%</span>
         <span class="stat-label">Avg Enrollment</span>
       </div>
+
     </section>
 
-    <section id="coursesContainer" class="courses-grid">
+    <section id="coursesContainer" class="courses-grid"> <!-- Container where course cards are dynamically inserted -->
       <div class="loading">Loading course catalog...</div>
     </section>
+
   </main>
 
-  <div id="courseModal" class="modal hidden">
+  <div id="courseModal" class="modal hidden"> <!-- Modal used to display full course details -->
     <div class="modal-content">
       <span class="close-btn" id="closeModalBtn">&times;</span>
       <div id="modalBody"></div>
     </div>
   </div>
 
-  <footer>
+  <footer> <!-- Footer displaying assignment information -->
     <p>ICS 385 Week 8 - JSON Fundamentals Assignment</p>
   </footer>
 
-  <script src="course-catalog.js"></script>
+  <script src="course-catalog.js"></script> <!-- Links the JavaScript file that controls the catalog -->
 </body>
 </html>
