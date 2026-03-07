@@ -13,7 +13,7 @@
   
 ## How to Run
 1. Open project folder in VS Code
-2. Run project with localhost
+2. Insert "py -m http.server 8000" into terminal line using \week8\basic-json as directory
 3. Open index.html in browser
 
 ## Purpose/Function of Code
