@@ -1,0 +1,263 @@
+{
+  "university": "University of Hawaii Maui College",
+  "semester": "Spring 2026",
+  "lastUpdated": "2026-03-03",
+  "departments": [
+    {
+      "code": "ICS",
+      "name": "Information and Computer Sciences",
+      "chair": "Dr. Jane Smith",
+      "courses": [
+        {
+          "courseCode": "ICS 101",
+          "title": "Digital Tools for College Success",
+          "credits": 3,
+          "description": "Introduction to basic digital tools and productivity software for college students.",
+          "prerequisites": [],
+          "instructor": {
+            "name": "Prof. Alan Lee",
+            "email": "alee@hawaii.edu",
+            "office": "Kaaike 101"
+          },
+          "schedule": {
+            "days": ["Monday", "Wednesday"],
+            "time": "9:00 AM - 10:15 AM",
+            "location": "Laulima 201",
+            "capacity": 30,
+            "enrolled": 22
+          },
+          "isActive": true,
+          "topics": ["Productivity", "Email", "Word Processing", "Spreadsheets"],
+          "assignments": [
+            {
+              "name": "Technology Skills Survey",
+              "points": 10,
+              "dueDate": "2026-01-20"
+            }
+          ]
+        },
+        {
+          "courseCode": "ICS 385",
+          "title": "Web Development and Administration",
+          "credits": 3,
+          "description": "Detailed knowledge of web page authoring and server-side programming.",
+          "prerequisites": ["ICS 320"],
+          "instructor": {
+            "name": "Dr. Debasis Bhattacharya",
+            "email": "debasisb@hawaii.edu",
+            "office": "Kaaike 114"
+          },
+          "schedule": {
+            "days": ["Tuesday"],
+            "time": "4:30 PM - 5:45 PM",
+            "location": "Online (Zoom)",
+            "capacity": 25,
+            "enrolled": 18
+          },
+          "isActive": true,
+          "topics": ["HTML", "CSS", "JavaScript", "Node.js", "APIs", "React"],
+          "assignments": [
+            {
+              "name": "Week 1 - Setup",
+              "points": 1,
+              "dueDate": "2026-01-19"
+            },
+            {
+              "name": "Week 2 - HTML/CSS",
+              "points": 3,
+              "dueDate": "2026-01-26"
+            }
+          ]
+        },
+        {
+          "courseCode": "ICS 415",
+          "title": "Database Management",
+          "credits": 3,
+          "description": "Introduction to relational databases, SQL, and data modeling.",
+          "prerequisites": ["ICS 320"],
+          "instructor": {
+            "name": "Prof. Maria Chen",
+            "email": "mchen@hawaii.edu",
+            "office": "Kaaike 116"
+          },
+          "schedule": {
+            "days": ["Thursday"],
+            "time": "1:00 PM - 2:15 PM",
+            "location": "Kaaike 202",
+            "capacity": 24,
+            "enrolled": 23
+          },
+          "isActive": true,
+          "topics": ["SQL", "Tables", "Queries", "Joins", "ERD"],
+          "assignments": [
+            {
+              "name": "SQL Lab 1",
+              "points": 20,
+              "dueDate": "2026-02-05"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "MATH",
+      "name": "Mathematics",
+      "chair": "Dr. Robert Johnson",
+      "courses": [
+        {
+          "courseCode": "MATH 100",
+          "title": "Survey of Mathematics",
+          "credits": 3,
+          "description": "General mathematics for liberal arts students with applications to daily life.",
+          "prerequisites": [],
+          "instructor": {
+            "name": "Dr. Sarah Wilson",
+            "email": "sarahw@hawaii.edu",
+            "office": "Academic Center 201"
+          },
+          "schedule": {
+            "days": ["Tuesday", "Thursday"],
+            "time": "10:00 AM - 11:15 AM",
+            "location": "AC 105",
+            "capacity": 35,
+            "enrolled": 28
+          },
+          "isActive": true,
+          "topics": ["Logic", "Probability", "Finance", "Graphs"],
+          "assignments": [
+            {
+              "name": "Homework 1",
+              "points": 10,
+              "dueDate": "2026-01-20"
+            }
+          ]
+        },
+        {
+          "courseCode": "MATH 140",
+          "title": "Calculus I",
+          "credits": 4,
+          "description": "Limits, derivatives, and applications of derivatives.",
+          "prerequisites": ["MATH 135"],
+          "instructor": {
+            "name": "Dr. Sarah Wilson",
+            "email": "sarahw@hawaii.edu",
+            "office": "Academic Center 201"
+          },
+          "schedule": {
+            "days": ["Monday", "Wednesday", "Friday"],
+            "time": "10:00 AM - 10:50 AM",
+            "location": "AC 105",
+            "capacity": 30,
+            "enrolled": 25
+          },
+          "isActive": true,
+          "topics": ["Limits", "Derivatives", "Integration", "Applications"],
+          "assignments": [
+            {
+              "name": "Midterm Exam",
+              "points": 100,
+              "dueDate": "2026-03-15"
+            }
+          ]
+        },
+        {
+          "courseCode": "MATH 241",
+          "title": "Calculus II",
+          "credits": 4,
+          "description": "Techniques of integration, sequences, series, and polar coordinates.",
+          "prerequisites": ["MATH 140"],
+          "instructor": {
+            "name": "Prof. Linda Park",
+            "email": "lpark@hawaii.edu",
+            "office": "AC 210"
+          },
+          "schedule": {
+            "days": ["Monday", "Wednesday", "Friday"],
+            "time": "11:00 AM - 11:50 AM",
+            "location": "AC 110",
+            "capacity": 28,
+            "enrolled": 27
+          },
+          "isActive": true,
+          "topics": ["Integration", "Series", "Polar Coordinates"],
+          "assignments": [
+            {
+              "name": "Quiz 1",
+              "points": 20,
+              "dueDate": "2026-02-02"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ENG",
+      "name": "English",
+      "chair": "Dr. Emily Carter",
+      "courses": [
+        {
+          "courseCode": "ENG 100",
+          "title": "Composition I",
+          "credits": 3,
+          "description": "Introduction to expository writing and critical reading.",
+          "prerequisites": [],
+          "instructor": {
+            "name": "Prof. James Miller",
+            "email": "jmiller@hawaii.edu",
+            "office": "Pilina 15"
+          },
+          "schedule": {
+            "days": ["Monday", "Wednesday"],
+            "time": "1:00 PM - 2:15 PM",
+            "location": "Pilina 8",
+            "capacity": 25,
+            "enrolled": 20
+          },
+          "isActive": true,
+          "topics": ["Essays", "Grammar", "Reading", "Revision"],
+          "assignments": [
+            {
+              "name": "Essay 1",
+              "points": 50,
+              "dueDate": "2026-02-01"
+            }
+          ]
+        },
+        {
+          "courseCode": "ENG 200",
+          "title": "Composition II",
+          "credits": 3,
+          "description": "Research writing, argument, and source integration.",
+          "prerequisites": ["ENG 100"],
+          "instructor": {
+            "name": "Prof. Hannah Reed",
+            "email": "hreed@hawaii.edu",
+            "office": "Pilina 18"
+          },
+          "schedule": {
+            "days": ["Tuesday", "Thursday"],
+            "time": "2:30 PM - 3:45 PM",
+            "location": "Pilina 10",
+            "capacity": 24,
+            "enrolled": 21
+          },
+          "isActive": true,
+          "topics": ["Research", "Argument", "APA", "Revision"],
+          "assignments": [
+            {
+              "name": "Annotated Bibliography",
+              "points": 40,
+              "dueDate": "2026-02-15"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "totalCourses": 8,
+    "totalDepartments": 3,
+    "totalCreditsOffered": 26,
+    "academicYear": "2025-2026"
+  }
+}
