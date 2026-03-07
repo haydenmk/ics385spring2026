@@ -14,7 +14,7 @@
 ## How to Run
 1. Open project folder in VS Code
 2. Insert "py -m http.server 8000" into terminal line using \week8\basic-json as directory
-3. Open index.html in browser
+3. Open localhost:8000 in browser
 
 ## Purpose/Function of Code
 - The project loads the information stored in the JSON file then uses JavaScript to display, search and filter the data in our course catalog through a web application.
