@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>UH Maui Campus Dashboard</title>
+	<link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+	<h1>UH Maui Campus Dashboard</h1>
+
+	<h2>Weather</h2>
+	<div id="weather">
+		Loading weather...
+	</div>
+
+	<h2>Programming Joke</h2>
+	<div id="progJoke">
+		Loading joke...
+	</div>
+
+	<h2>Chuck Norris Joke</h2>
+	<div id="chuckJoke">
+		Loading joke...
+	</div>
+
+	<button onclick="loadWeather()">Refresh Weather</button>
+	<button onclick="loadJokes()">New Jokes</button>
+
+	<hr>
+
+	<h2>Course Catalog</h2>
+
+	<div class="controls">
+		<input type="text" id="searchInput" placeholder="Search courses...">
+		<button id="clearSearchBtn">Clear Search</button>
+
+		<select id="departmentFilter">
+			<option value="all">All Departments</option>
+			<option value="ICS">ICS</option>
+			<option value="ENG">ENG</option>
+			<option value="MATH">MATH</option>
+		</select>
+
+		<select id="creditsFilter">
+			<option value="all">All Credits</option>
+			<option value="1">1 Credit</option>
+			<option value="2">2 Credits</option>
+			<option value="3">3 Credits</option>
+			<option value="4">4 Credits</option>
+			<option value="5">5 Credits</option>
+			<option value="6">6 Credits</option>
+		</select>
+
+		<button id="loadSampleBtn">Load Sample Data</button>
+		<button id="addCourseBtn">Add New Course</button>
+		<button id="exportBtn">Export JSON</button>
+	</div>
+
+	<h3>Statistics</h3>
+	<div class="stats">
+		<p>Total Courses: <span id="totalCourses">0</span></p>
+		<p>Total Departments: <span id="totalDepartments">0</span></p>
+		<p>Average Enrollment: <span id="averageEnrollment">0</span></p>
+	</div>
+
+	<div id="coursesContainer">
+		Loading course catalog...
+	</div>
+
+	<div id="courseModal" class="hidden">
+		<div class="modal-content">
+			<button id="closeModalBtn">Close</button>
+			<div id="modalBody"></div>
+		</div>
+	</div>
+
+	<script src="config.js"></script>
+	<script src="api-client.js"></script>
+	<script src="dashboard.js"></script>
+	<script src="course-catalog.js"></script>
+
+</body>
+
+</html>
