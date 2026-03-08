@@ -24,3 +24,4 @@ This repository is for my ICS 385 work.
 
 # Week 8 - JSON and APIs
 - HW8a: Course Catalog - [course-catalog.js](https://github.com/haydenmk/ics385spring2026/blob/main/week8/basic-json/course-catalog.js), [index.html](https://github.com/haydenmk/ics385spring2026/blob/main/week8/basic-json/index.html), [sample-data.json](https://github.com/haydenmk/ics385spring2026/blob/main/week8/basic-json/sample-data.json), [styles.css](https://github.com/haydenmk/ics385spring2026/blob/main/week8/basic-json/styles.css)
+- HW8b: Dashboard - [Dashboard files](https://github.com/haydenmk/ics385spring2026/tree/main/week8/Dashboard)
