@@ -29,3 +29,10 @@ This repository is for my ICS 385 work.
 # Week 9 - APIs
 - HW9b: NOAA API Weather Service - [forecast.js](https://github.com/haydenmk/ics385spring2026/blob/main/week9/NOAA%20API%20Weather%20Service/forecast.js)
 - HW9c: Weather API - [weather.js](https://github.com/haydenmk/ics385spring2026/blob/main/week9/Weather%20API/weather.js)
+
+# Week 10 - MongoDB
+- Term Project 3 - [seed.js](https://github.com/haydenmk/ics385spring2026/blob/main/week10/seed.js)
+
+# Week 11 - PyMongo and Mongoose
+- HW11a: PyMongo and MongoDB - [customerdb.py](https://github.com/haydenmk/ics385spring2026/blob/main/week11/PyMongo%20and%20MongoDB/customerdb.py)
+- 
