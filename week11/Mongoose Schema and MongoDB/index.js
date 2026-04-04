@@ -1,10 +1,11 @@
+require('dotenv').config();
 const mongoose = require('mongoose');
 const Customer = require('./customerModel');
 const Hotel = require('./hotelModel');
 const Amenities = require('./amenitiesModel');
 
 // Replace 'myDatabase' with the desired database name
-const connectionString = 'mongodb://127.0.0.1:27017/myCustomerDB';
+const connectionString = 'mongodb+srv://haydenmk_db_user'; // Not the full connection link, verified that it connected though.
 
 mongoose.connect(connectionString, { useNewUrlParser: true})
   .then(async () => {
