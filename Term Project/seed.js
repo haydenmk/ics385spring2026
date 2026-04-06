@@ -14,13 +14,13 @@ async function seedDatabase() {
 
     await Property.insertMany([
       {
-        name: "Waikiki Family Condo",
+        name: "North Shore Family Condo",
         island: "Oahu",
         type: "vacation rental",
-        description: "A family-friendly Waikiki condo with beach access, a full kitchen, accommodates up to 6 guests. Perfect for families looking to enjoy the beach and Waikiki's variety of attractions and shopping.",
+        description: "A family-friendly Waikiki condo with beach access, a full kitchen, accommodates up to 6 guests. Perfect for families looking to enjoy the beach and the North Shore's variety of attractions and shopping.",
         amenities: ["wifi", "pool", "kitchen", "beach access", "multiple bedrooms"],
         targetSegment: "Family",
-        imageURL: "/images/waikiki-house.jpg"
+        imageURL: "/images/north-shore-house.jpg"
       },
       {
         name: "Laie Beach Retreat",
@@ -32,13 +32,13 @@ async function seedDatabase() {
         imageURL: "/images/laie-house.jpg"
       },
       {
-        name: "Waianae Sunset Family Home",
+        name: "Kahuku Sunset Family Home",
         island: "Oahu",
         type: "vacation rental",
-        description: "A spacious, luxurious family home in Waianae, accommodates up to 12 guests, complete with a beautiful view of the sunset.",
+        description: "A spacious, luxurious family home in Kahuku, accommodates up to 12 guests, complete with a beautiful view of the sunset.",
         amenities: ["wifi", "pool", "kitchen", "balcony", "ocean view"],
         targetSegment: "Family",
-        imageURL: "/images/waianae-house.jpg"
+        imageURL: "/images/kahuku-house.jpg"
       },
       {
         name: "Newly Remodeled Turtle Bay Family Condo",
