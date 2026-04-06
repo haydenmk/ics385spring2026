@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Oahu Family Vacation Rentals</title>
+</head>
+<body>
+  <h1>Oahu Family Vacation Rentals</h1>
+
+  <% properties.forEach(property => { %>
+    <div style="border: 1px solid black; padding: 10px; margin-bottom: 10px;">
+      <h2><%= property.name %></h2>
+      <p><strong>Island:</strong> <%= property.island %></p>
+      <p><strong>Type:</strong> <%= property.type %></p>
+      <p><strong>Description:</strong> <%= property.description %></p>
+      <p><strong>Target Segment:</strong> <%= property.targetSegment %></p>
+      <p><strong>Amenities:</strong> <%= property.amenities.join(", ") %></p>
+      <p><strong>Image URL:</strong> <%= property.imageURL %></p>
+      <p><strong>Number of Reviews:</strong> <%= property.reviews.length %></p>
+    </div>
+  <% }) %>
+</body>
+</html>
