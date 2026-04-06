@@ -36,6 +36,7 @@
 - Created a basic EJS page at "/properties" to list all properties
 - Tested the required routes in Postman
 - Exported the Postman collection JSON for submission
+- Updated seed.js properties to be specifically for properties in the North Shore of Oahu.
 
 ## Purpose/Function of Code
 - The project connects to MongoDB Atlas using Mongoose, adds embedded guest reviews to each property document, creates Express CRUD-style routes for viewing properties and adding reviews, and renders a basic EJS webpage that lists the Oahu vacation rental properties.
