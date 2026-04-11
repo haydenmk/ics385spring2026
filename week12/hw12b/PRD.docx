@@ -1,0 +1,31 @@
+Hayden Suzuki
+10 April 2026
+ICS 385
+Dr. Debasis
+ICS 385 Project Requirements Document
+Project Overview
+The project that I am currently creating is called Oahu Family Vacation Rentals (will likely be changed to North Shore Family Vacation Rentals). The project is focused on targeting families with children that are looking for a vacation rental with easy access to the various attractions offered by the North Shore. There are three pages featured on the website, a marketing page, a visitor dashboard, and an admin section. The marketing section will be the public application displaying information on the various rentals offered by the business, the visitor dashboard will display various things about the North Shore of Oahu such as live video cams, weather, and traffic data, and the admin section will be for property managers and their tasks such as updating information on the properties. 
+User Personas
+Name: LeBron James
+Role: Parent planning trip for family of four.
+Goal: Find an affordable but comfortable vacation rental made for families.
+Pain Point: Most of the vacation rentals available in the North Shore are condos or small cottages not suited for hosting more than 2-3 people.
+
+Name: Austin Reaves
+Role: Property manager
+Goal: Keep property information up-to-date, maintain property upkeep.
+Pain Point: Vacation rentals can be difficult to manage without a properly managed or difficult to understand website UI.
+Marketing Page Requirements
+Hero: displays the property name and image of the property.
+About: displays a brief description of the property and why it should be enticing to families.
+Amenities: displays a list of amenities such as if the property has wi-fi, a kitchen, # of beds, parking, a pool or beach access.
+CTA: displays a button allowing the user to directly contact the property manager for booking.
+Component Hierarchy Diagram
+
+Disclaimer: ChatGPT was used for this section to get an overview of what the project’s hierarchy will look like when the project is fully complete.
+Data Flow
+Property data will be stored in MongoDB Atlas, then accessed through Mongoose. The backend is capable of using GET /properties, GET/properties/:id, and POST/properties/:id/reviews, allowing React to access all of the properties and display the selected one. 
+Acceptance Criteria
+Given a user visits the Marketing page, when the page loads, then HeroSection should display the selected North Shore property’s information.
+Given a user scrolls to the amenities area, when the amenities section is accessed, then amenities available at the property will display.
+Given a user clicks on a property, when the “Book/Contact Us” button is clicked, then they will be directed to the property manager’s email.
