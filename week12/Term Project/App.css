@@ -1,0 +1,175 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f7f7f7;
+  color: #222;
+}
+
+.app {
+  width: 100%;
+}
+
+.header {
+  background-color: #0d3b66;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+.header h2 {
+  margin: 0 0 10px 0;
+}
+
+.header nav {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.header nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.hero {
+  background-color: white;
+  padding: 30px 20px;
+  text-align: center;
+}
+
+.hero-image {
+  width: 100%;
+  max-width: 900px;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.hero-text h1 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-size: 2.5rem;
+}
+
+.hero-text h3 {
+  margin: 0;
+  color: #0d3b66;
+}
+
+.hero-text p {
+  font-size: 1.1rem;
+  margin-top: 15px;
+}
+
+.about,
+.amenities,
+.cta {
+  background-color: white;
+  max-width: 1000px;
+  margin: 20px auto;
+  padding: 25px;
+  border-radius: 10px;
+}
+
+.about h2,
+.amenities h2,
+.cta h2 {
+  color: #0d3b66;
+  margin-top: 0;
+}
+
+.amenities ul {
+  padding-left: 20px;
+}
+
+.amenities li {
+  margin-bottom: 10px;
+}
+
+.cta {
+  text-align: center;
+}
+
+.cta-button {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 12px 20px;
+  background-color: #f4a261;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+}
+
+.footer {
+  background-color: #0d3b66;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: 30px;
+}
+
+@media (max-width: 768px) {
+  .hero-text h1 {
+    font-size: 2rem;
+  }
+
+  .hero-image {
+    height: 250px;
+  }
+
+  .about,
+  .amenities,
+  .cta {
+    margin: 15px;
+    padding: 20px;
+  }
+}
+
+.hero-text {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.hero-text p {
+  max-width: 650px;
+  margin: 15px auto 0;
+  line-height: 1.6;
+}
+
+.about p,
+.amenities li,
+.cta p,
+.footer p {
+  line-height: 1.6;
+}
+
+.about,
+.amenities,
+.cta {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.cta-button:hover {
+  background-color: #e08b47;
+}
+
+@media (max-width: 480px) {
+  .header {
+    padding: 15px;
+  }
+
+  .header nav {
+    gap: 12px;
+  }
+
+  .hero-text h1 {
+    font-size: 1.6rem;
+  }
+
+  .hero-text p {
+    font-size: 1rem;
+  }
+}
