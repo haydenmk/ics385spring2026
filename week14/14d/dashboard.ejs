@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Dashboard</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f7f7f7;
+      margin: 0;
+      color: #222;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 30px auto;
+      padding: 20px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    }
+
+    h1, h2 {
+      color: #0d3b66;
+    }
+
+    a.logout {
+      display: inline-block;
+      margin-top: 10px;
+      color: white;
+      background: #c0392b;
+      padding: 10px 16px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <h1>North Shore Family Vacation Rentals Admin Dashboard</h1>
+      <p>Welcome, <strong><%= user.email %></strong></p>
+      <p>Total properties: <strong><%= properties.length %></strong></p>
+      <p>Total guest reviews: <strong><%= reviewCount %></strong></p>
+      <a class="logout" href="/admin/logout">Logout</a>
+    </div>
+
+    <div class="card">
+      <h2>Property List</h2>
+      <ul>
+        <% properties.forEach(property => { %>
+          <li>
+            <strong><%= property.name %></strong> — <%= property.island %> — <%= property.type %>
+          </li>
+        <% }) %>
+      </ul>
+    </div>
+  </div>
+</body>
+</html>

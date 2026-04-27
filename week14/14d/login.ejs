@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Login</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f7f7f7;
+      color: #222;
+    }
+
+    .login-container {
+      max-width: 420px;
+      margin: 60px auto;
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+      text-align: center;
+    }
+
+    .login-container img {
+      width: 100%;
+      max-width: 320px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      color: #0d3b66;
+      margin-bottom: 10px;
+    }
+
+    .error {
+      color: red;
+      font-weight: bold;
+      margin-bottom: 12px;
+    }
+
+    .success {
+      color: green;
+      font-weight: bold;
+      margin-bottom: 12px;
+    }
+
+    form {
+      text-align: left;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: bold;
+    }
+
+    input {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 16px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      box-sizing: border-box;
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      background-color: #2a9d8f;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #23867a;
+    }
+  </style>
+</head>
+<body>
+  <div class="login-container">
+    <img src="/images/waikiki-house.jpg" alt="North Shore Family Vacation Rentals" />
+    <h1>North Shore Family Vacation Rentals</h1>
+    <p>Admin Login</p>
+
+    <% if (error) { %>
+      <p class="error"><%= error %></p>
+    <% } %>
+
+    <% if (logoutMessage) { %>
+      <p class="success"><%= logoutMessage %></p>
+    <% } %>
+
+    <form action="/admin/login" method="POST">
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" placeholder="Enter your admin email" required />
+
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" placeholder="Enter your password" required />
+
+      <button type="submit">Log In</button>
+    </form>
+  </div>
+</body>
+</html>
